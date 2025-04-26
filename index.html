@@ -13,16 +13,25 @@
     <!-- Top Bar -->
     <div class="bg-gray-800 text-white text-sm flex justify-between px-6 py-2">
         <div class="flex space-x-4">
-            <span>📍 Pakistan, Islamabad</span>
-            <span>✉️ info@netvio.com</span>
+            <span class="flex justify-between items-center">
+                <img src="assets/images/location-color.svg" class="w-3">
+                <span class="px-2">Pakistan, Islamabad</span>
+            </span>
+            <span class="flex justify-between items-center">
+                <img src="assets/images/email-color-sm.svg" class="w-3">
+                <span class="px-2">info@netvio.com</span>
+            </span>
         </div>
         <div class="flex space-x-4">
-            <span>🕒 Mon - Fri: 8:00 am - 5:00 pm</span>
-            <div class="flex space-x-2">
-                <a href="#">🌐</a>
-                <a href="#">🐦</a>
-                <a href="#">📘</a>
-                <a href="#">📌</a>
+            <span class="flex justify-between items-center">
+                <img src="assets/images/Time.svg" alt="" class="w-3">
+                <span class="px-2">Mon - Fri: 8:00 am - 5:00 pm</span>
+            </span>
+            <div class="flex justify-between items-center space-x-2">
+                <a href="#"><img src="assets/images/Twiter.svg" alt="" class="w-3"></a>
+                <a href="#"><img src="assets/images/Fb.svg" alt="" class="w-3"></a>
+                <a href="#"><img src="assets/images/Insta.svg" alt="" class="w-3"></a>
+                <a href="#"><img src="assets/images/Pintrest.svg" alt="" class="w-3"></a>
             </div>
         </div>
     </div>
@@ -30,7 +39,7 @@
     <!-- Navbar -->
     <nav class="flex justify-between items-center px-10 py-4">
         <div class="flex items-center space-x-2">
-            <img src="assets/images/Logo Netvio.svg" class="h-8">
+            <img src="assets/images/logo-netvio.svg" class="h-8">
         </div>
         <ul class="flex space-x-8 text-gray-700">
             <li><a href="#" class="text-purple-600 font-semibold">Home</a></li>
@@ -46,10 +55,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="flex flex-col-reverse lg:flex-row items-center px-10 py-5" style="background-image: url('assets/images/Group 648.png'); background-size: cover; background-position: center;">
+    <section class="flex flex-col-reverse lg:flex-row items-center px-10 py-5"
+        style="background-image: url('assets/images/background-img.png'); background-size: cover; background-position: center;">
         <!-- Left Content -->
         <div class="lg:w-1/2 space-y-6">
-            <p class="text-purple-500 font-semibold"><img src="assets/images/Group 565.svg" alt=""></p>
+            <p class="text-purple-500 font-semibold"><img src="assets/images/best-in-tech.svg" alt=""></p>
             <h1 class="text-4xl font-bold leading-snug">
                 Reach Your <span class="text-purple-700">Business</span><br>
                 Goals with our <span class="underline decoration-pink-400">Innovations</span>
@@ -60,7 +70,7 @@
                 solutions that make an impact. Let’s build your future — together.
             </p>
             <div class="flex items-center space-x-6">
-                <button class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700">Get Started</button>
+                <button class="bg-[#40DDB6] hover:bg-purple-700 text-white px-6 py-3 rounded-full">Get Started</button>
                 <button class="flex items-center space-x-2">
                     <span class="w-3 h-3 bg-black rounded-full inline-block"></span>
                     <span>Watch Video</span>
@@ -70,7 +80,7 @@
 
         <!-- Right Image -->
         <div class="lg:w-1/2 relative">
-            <img src="assets/images/Group 2052.png" alt="Hero Image" class="w-full max-w-md mx-auto ">
+            <img src="assets/images/banner-review-img.png" alt="Hero Image" class="w-full max-w-md mx-auto ">
             <!-- Example Review Box -->
             <!-- <div class="absolute bottom-4 left-4 bg-white p-4 rounded shadow-md flex items-center space-x-4">
                 <div class="text-lg font-bold">4.9 ⭐⭐⭐⭐⭐</div>
@@ -87,7 +97,7 @@
     <section class="flex flex-col lg:flex-row items-start px-10 py-16 space-y-10 lg:space-y-0 lg:space-x-12">
         <!-- Left Side -->
         <div class="lg:w-1/2 space-y-6">
-            <img src="assets/images/Image.png" alt="Team Working" class="rounded-md shadow-md">
+            <img src="assets/images/team-work-img.png" alt="Team Working" class="rounded-md shadow-md">
             <div>
                 <h3 class="text-2xl font-bold mb-2">We’re Ready To Grow Your Business With Us</h3>
                 <p class="text-gray-600">
@@ -109,11 +119,11 @@
             </p>
             <ul class="space-y-3">
                 <li class="flex items-center space-x-3">
-                    <span class="bg-purple-600 text-white p-1 rounded-full">✔</span>
+                    <span class="rounded-full p-1"><img src="assets/images/pink-tick.svg" alt=""></span>
                     <span>Helping Teams Build</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <span class="bg-purple-600 text-white p-1 rounded-full">✔</span>
+                    <span class="rounded-full p-1"><img src="assets/images/pink-tick.svg" alt=""></span>
                     <span>Bold Brands</span>
                 </li>
             </ul>
@@ -122,14 +132,15 @@
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mt-6">
                 <div class="border p-4 rounded w-full sm:w-1/2">
                     <div class="flex items-center space-x-2 mb-2">
-                        <span class="text-green-500 text-2xl"><img src="assets/images/Icon.svg" alt=""></span>
+                        <span class="text-green-500 text-2xl"><img src="assets/images/experience-icon.svg"
+                                alt=""></span>
                         <h4 class="font-bold">Experience</h4>
                     </div>
                     <p class="text-gray-600 text-sm">Bringing 10+ years of expert experience to the table.</p>
                 </div>
                 <div class="border p-4 rounded w-full sm:w-1/2">
                     <div class="flex items-center space-x-2 mb-2">
-                        <span class="text-green-500 text-2xl"><img src="assets/images/Icon (1).svg" alt=""></span>
+                        <span class="text-green-500 text-2xl"><img src="assets/images/award-icon.svg" alt=""></span>
                         <h4 class="font-bold">Awards Winner</h4>
                     </div>
                     <p class="text-gray-600 text-sm">Over the past 10 years, we've earned multiple awards.</p>
@@ -137,7 +148,7 @@
             </div>
 
             <!-- CTA Button -->
-            <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full mt-6">
+            <button class="bg-[#40DDB6] hover:bg-purple-700 text-white px-6 py-3 rounded-full mt-6">
                 Get Started Today
             </button>
         </div>
@@ -152,14 +163,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <!-- Card 1 -->
             <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                <img src="assets/images/Group 600 (2).svg" alt="Branding Design" class="rounded-md mb-4">
+                <img src="assets/images/brand-design-img.svg" alt="Branding Design" class="rounded-md mb-4">
                 <h3 class="font-bold text-lg mb-2">Branding Design</h3>
                 <p class="text-gray-600 mb-4 text-sm">
                     Create a lasting first impression with a powerful brand identity. From logo design to brand
                     strategy, we make your business unforgettable.
                 </p>
                 <a href="#"
-                    class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                    class="bg-[#593FFB] hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
                     <span>Get Started Today</span>
                     <span>↗</span>
                 </a>
@@ -167,14 +178,14 @@
 
             <!-- Card 2 -->
             <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                <img src="assets/images/Group 600.svg" alt="Graphic Design" class="rounded-md mb-4">
+                <img src="assets/images/graphic-dimg.svg" alt="Graphic Design" class="rounded-md mb-4">
                 <h3 class="font-bold text-lg mb-2">Graphic Design</h3>
                 <p class="text-gray-600 mb-4 text-sm">
                     Deliver your message through bold, creative visuals. We design stunning assets for web, social
                     media, ads, and beyond.
                 </p>
                 <a href="#"
-                    class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                    class="bg-[#593FFB] hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
                     <span>Get Started Today</span>
                     <span>↗</span>
                 </a>
@@ -182,14 +193,14 @@
 
             <!-- Card 3 -->
             <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                <img src="assets/images/Group 600 (1).svg" alt="Web Development" class="rounded-md mb-4">
+                <img src="assets/images/web-dev-img.svg" alt="Web Development" class="rounded-md mb-4">
                 <h3 class="font-bold text-lg mb-2">Web Development</h3>
                 <p class="text-gray-600 mb-4 text-sm">
                     We build fast, secure, and responsive websites using modern technologies — optimized for SEO,
                     performance, and usability across devices.
                 </p>
                 <a href="#"
-                    class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                    class="bg-[#593FFB] hover:bg-purple-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
                     <span>Get Started Today</span>
                     <span>↗</span>
                 </a>
@@ -205,29 +216,29 @@
         <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <!-- Card 1 - Active -->
-            <div class="bg-purple-600 text-white p-8 rounded-2xl flex flex-col items-center">
-                <div class="text-4xl mb-4"><img src="assets/images/Icon (2).svg" alt=""></div>
+            <div class="bg-[#593FFB] text-white p-8 rounded-2xl flex flex-col items-center">
+                <div class="text-4xl mb-4"><img src="assets/images/product-icon.svg" alt=""></div>
                 <h3 class="font-bold text-lg mb-2">Product development</h3>
                 <p class="text-sm">Website or <br> App development</p>
             </div>
 
             <!-- Card 2 -->
             <div class="border p-8 rounded-2xl flex flex-col items-center">
-                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/Group 16.svg" alt=""></div>
+                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/ui-ux-icon.svg" alt=""></div>
                 <h3 class="font-bold text-lg mb-2">UI/UX designing</h3>
                 <p class="text-sm text-gray-600">Wireframing and <br> Prototyping</p>
             </div>
 
             <!-- Card 3 -->
             <div class="border p-8 rounded-2xl flex flex-col items-center">
-                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/Group 15.svg" alt=""></div>
+                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/data-analysis-icon.svg" alt=""></div>
                 <h3 class="font-bold text-lg mb-2">Data analysis</h3>
                 <p class="text-sm text-gray-600">Turning data <br> into insights</p>
             </div>
 
             <!-- Card 4 -->
             <div class="border p-8 rounded-2xl flex flex-col items-center">
-                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/Group 14.svg" alt=""></div>
+                <div class="text-4xl text-purple-600 mb-4"><img src="assets/images/edit-icon.svg" alt=""></div>
                 <h3 class="font-bold text-lg mb-2">Content management</h3>
                 <p class="text-sm text-gray-600">Clear and consistent <br> content for the product</p>
             </div>
@@ -237,7 +248,7 @@
     <section class="bg-[#1E2143] px-10 py-16 text-white flex flex-col lg:flex-row items-center justify-between">
         <!-- Left Image -->
         <div class="lg:w-1/2 relative mb-10 lg:mb-0">
-            <img src="assets/images/Group 2073.svg" alt="Why Choose Us" class="w-full max-w-sm mx-auto">
+            <img src="assets/images/why-chose-us-img.svg" alt="Why Choose Us" class="w-full max-w-sm mx-auto">
             <!-- Background splashes can be positioned using absolute divs or included in the image -->
         </div>
 
@@ -249,19 +260,19 @@
             </h2>
             <ul class="space-y-3">
                 <li class="flex items-center justify-center lg:justify-start space-x-3">
-                    <span class="bg-green-400 text-[#1E2143] rounded-full p-1">✔</span>
+                    <span class="rounded-full p-1"><img src="assets/images/Checklist-Circle.svg" alt=""></span>
                     <span>Passionate</span>
                 </li>
                 <li class="flex items-center justify-center lg:justify-start space-x-3">
-                    <span class="bg-green-400 text-[#1E2143] rounded-full p-1">✔</span>
+                    <span class="rounded-full p-1"><img src="assets/images/Checklist-Circle.svg" alt=""></span>
                     <span>Professional</span>
                 </li>
                 <li class="flex items-center justify-center lg:justify-start space-x-3">
-                    <span class="bg-green-400 text-[#1E2143] rounded-full p-1">✔</span>
+                    <span class="rounded-full p-1"><img src="assets/images/Checklist-Circle.svg" alt=""></span>
                     <span>Support</span>
                 </li>
             </ul>
-            <button class="bg-green-400 hover:bg-green-500 text-[#1E2143] px-8 py-3 rounded-full font-semibold">
+            <button class="bg-green-400 hover:bg-[#40DDB6] text-[#1E2143] px-8 py-3 rounded-full font-semibold">
                 Get Started
             </button>
         </div>
@@ -275,7 +286,7 @@
                 <h2 class="text-3xl font-bold leading-snug">You can check our projects <br> as inspirations.</h2>
             </div>
             <div class="mt-4 md:mt-0">
-                <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full inline-block">
+                <a href="#" class="bg-[#593FFB] hover:bg-purple-700 text-white px-6 py-3 rounded-full inline-block">
                     More Work
                 </a>
             </div>
@@ -283,9 +294,9 @@
 
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img src="assets/images/1.svg" alt="Project 1" class="rounded-md shadow">
-            <img src="assets/images/2.svg" alt="Project 2" class="rounded-md shadow">
-            <img src="assets/images/3.svg" alt="Project 3" class="rounded-md shadow">
+            <img src="assets/images/project-1.svg" alt="Project 1" class="rounded-md shadow">
+            <img src="assets/images/project-2.svg" alt="Project 2" class="rounded-md shadow">
+            <img src="assets/images/project-3.svg" alt="Project 3" class="rounded-md shadow">
         </div>
     </section>
 
@@ -299,7 +310,7 @@
             <!-- Testimonial 1 -->
             <div class="bg-gradient-to-br from-green-200 to-purple-300 p-6 rounded-lg">
                 <div class="flex items-center space-x-4 mb-4">
-                    <img src="assets/images/Image.svg" alt="John Carter" class="w-12 h-12 rounded-full">
+                    <img src="assets/images/john-carter.svg" alt="John Carter" class="w-12 h-12 rounded-full">
                     <div class="text-left">
                         <h4 class="font-bold">John Carter</h4>
                         <p class="text-sm text-gray-700">Marketing Lead at Google</p>
@@ -318,7 +329,7 @@
             <!-- Testimonial 2 -->
             <div class="bg-gradient-to-br from-green-200 to-purple-300 p-6 rounded-lg">
                 <div class="flex items-center space-x-4 mb-4">
-                    <img src="assets/images/Image (1).svg" alt="Peeter Pawl" class="w-12 h-12 rounded-full">
+                    <img src="assets/images/peeter-pawl.svg" alt="Peeter Pawl" class="w-12 h-12 rounded-full">
                     <div class="text-left">
                         <h4 class="font-bold">Peeter Pawl</h4>
                         <p class="text-sm text-gray-700">Designer</p>
@@ -336,7 +347,7 @@
         </div>
 
         <!-- CTA Button -->
-        <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full mt-10">
+        <button class="bg-[#593FFB] hover:bg-purple-700 text-white px-8 py-3 rounded-full mt-10">
             View More
         </button>
     </section>
@@ -349,22 +360,22 @@
         <!-- Contact Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <!-- Address -->
-            <div class="bg-purple-600 text-white p-10 rounded-md flex flex-col items-center space-y-4">
-                <div class="text-4xl"><img src="assets/images/Vector (5).svg" alt=""></div>
+            <div class="bg-[#593FFB] text-white p-10 rounded-md flex flex-col items-center space-y-4">
+                <div class="text-4xl"><img src="assets/images/location-large.svg" alt=""></div>
                 <h4 class="font-bold">ADDRESS</h4>
                 <p>Pakistan, Islamabad</p>
             </div>
 
             <!-- Phone -->
             <div class="border border-purple-500 p-10 rounded-md flex flex-col items-center space-y-4">
-                <div class="text-4xl text-purple-600"><img src="assets/images/Vector (1).svg" alt=""></div>
+                <div class="text-4xl text-purple-600"><img src="assets/images/phone-color.svg" alt=""></div>
                 <h4 class="font-bold text-purple-600">PHONE</h4>
                 <p class="text-purple-600">01234567890</p>
             </div>
 
             <!-- Email -->
             <div class="border border-purple-500 p-10 rounded-md flex flex-col items-center space-y-4">
-                <div class="text-4xl text-purple-600"><img src="assets/images/Vector (2).svg" alt=""></div>
+                <div class="text-4xl text-purple-600"><img src="assets/images/email-color.svg" alt=""></div>
                 <h4 class="font-bold text-purple-600">EMAIL</h4>
                 <p class="text-purple-600">info@netvio.com</p>
             </div>
@@ -419,7 +430,7 @@
         <h2 class="text-3xl font-bold mb-10">Be the First to Know</h2>
 
         <!-- Subscribe Box -->
-        <div class="bg-purple-600 text-white max-w-4xl mx-auto p-10 rounded-lg space-y-6">
+        <div class="bg-[#593FFB] text-white max-w-4xl mx-auto p-10 rounded-lg space-y-6">
             <p>Join Our Mailing List & to get our news.</p>
             <form class="flex flex-col sm:flex-row justify-center">
                 <input type="email" placeholder="your email address"
@@ -431,7 +442,7 @@
         </div>
     </section>
 
-    <footer class="bg-purple-600 text-white px-10 py-16">
+    <footer class="bg-[#593FFB] text-white px-10 py-16">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo -->
             <div>
@@ -464,26 +475,35 @@
             <div>
                 <h4 class="font-semibold mb-2">Contact</h4>
                 <ul class="space-y-2 text-sm">
-                    <li>📍 info@netvio.com</li>
-                    <li>📞 01234567890</li>
-                    <li>✉️ Pakistan, Islamabad</li>
+                    <li class="flex items-center space-x-2">
+                        <img src="assets/images/email.svg" class="w-3 h-3" alt="">
+                        <span>info@netvio.com</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <img src="assets/images/phone.svg" class="w-3 h-3" alt="">
+                        <span>01234567890</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <img src="assets/images/location.svg" class="w-3 h-3" alt="">
+                        <span>Pakistan, Islamabad</span>
+                    </li>
                 </ul>
+
                 <div class="flex space-x-4 mt-4 text-xl">
-                    <a href="#">📘</a>
-                    <a href="#">📸</a>
-                    <a href="#">🐦</a>
-                    <a href="#">▶️</a>
-                    <a href="#">Ⓦ</a>
+                    <a href="#"><img src="assets/images/bxl-facebook.svg" alt=""></a>
+                    <a href="#"><img src="assets/images/instagram-white.svg" alt=""></a>
+                    <a href="#"><img src="assets/images/bxl-twitter.svg" alt=""></a>
+                    <a href="#"><img src="assets/images/youtube-logo.svg" alt=""></a>
+                    <a href="#"><img src="assets/images/wordpress.svg" alt=""></a>
                 </div>
             </div>
         </div>
 
         <!-- Bottom Bar -->
         <div class="border-t border-white mt-10 pt-4 text-center text-sm">
-            Copyright © 2025 netvio.tech | Powered by netvio.tech
+            Copyright © 2025 netvio.tech | Powered by Netvio.Tech
         </div>
     </footer>
-
 
 </body>
 
