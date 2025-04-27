@@ -1,0 +1,465 @@
+<?php
+
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Netvio
+ */
+
+get_header();
+?>
+
+<!-- Hero Section -->
+<section class="flex flex-col-reverse lg:flex-row items-center px-10 py-5"
+    style="background-image: url('<?php echo esc_url(get_template_directory_uri() . '/assets/images/background-img.png'); ?>');
+background-size: cover; background-position: center;">
+    <!-- Left Content -->
+    <div class="lg:w-1/2 space-y-6">
+        <p class="text-purple-500 font-semibold"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/best-in-tech.svg" alt=""></p>
+        <h1 class="text-4xl font-bold leading-snug">
+            Reach Your <span class="relative inline-block">Business
+                <svg class="absolute left-0 bottom-0 w-full h-2" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,8 Q50,-3 100,8" stroke="#f472b6" stroke-width="2" fill="none" />
+                </svg>
+            </span><br>
+            Goals with our Innovations
+        </h1>
+        <p class="text-gray-600">
+            At Netvio Tech, we transform bold ideas into powerful digital experiences.
+            Whether you’re launching a startup or scaling your brand, we deliver creative
+            solutions that make an impact. Let’s build your future — together.
+        </p>
+        <div class="flex items-center space-x-6">
+            <button class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full">Get Started</button>
+            <button class="flex items-center space-x-2">
+                <span class="w-3 h-3 bg-black rounded-full inline-block"></span>
+                <span>Watch Video</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="lg:w-1/2 relative">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-review-img.png" alt="Hero Image" class="w-full max-w-md mx-auto ">
+        <!-- Example Review Box -->
+        <!-- <div class="absolute bottom-4 left-4 bg-white p-4 rounded shadow-md flex items-center space-x-4">
+                <div class="text-lg font-bold">4.9 ⭐⭐⭐⭐⭐</div>
+                <div class="flex -space-x-2">
+                    <img src="user1.png" class="w-8 h-8 rounded-full border-2 border-white">
+                    <img src="user2.png" class="w-8 h-8 rounded-full border-2 border-white">
+                    <img src="user3.png" class="w-8 h-8 rounded-full border-2 border-white">
+                </div>
+                <span class="bg-purple-200 text-purple-800 px-2 py-1 rounded-full text-xs">5k</span>
+            </div> -->
+    </div>
+</section>
+
+<section class="flex flex-col lg:flex-row items-start px-10 py-16 space-y-10 lg:space-y-0 lg:space-x-12">
+    <!-- Left Side -->
+    <div class="lg:w-1/2 space-y-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-work-img.png" alt="Team Working" class="rounded-md shadow-md">
+        <div>
+            <h3 class="text-2xl font-bold mb-2">We’re Ready To Grow Your Business With Us</h3>
+            <p class="text-gray-600">
+                With 10+ years of experience and award-winning results, our expert team is here to help your
+                business grow, innovate, and stand out with the right strategy and support.
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="lg:w-1/2 space-y-6">
+        <p class="text-sm font-semibold flex items-center gap-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <span>Welcome To NetvioTech</span>
+        </p>
+        <h2 class="text-3xl font-bold leading-snug">We Care About Your Business Plan.</h2>
+        <p class="text-gray-600">
+            We partner with ambitious businesses to craft tailored digital solutions that deliver results.
+            From concept to launch, our collaborative process ensures your website reflects your mission,
+            engages your audience, and drives measurable growth.
+            Let’s build something great — together.
+        </p>
+        <ul class="space-y-3">
+            <li class="flex items-center space-x-3">
+                <span class="rounded-full p-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/pink-tick.svg" alt=""></span>
+                <span>Helping Teams Build</span>
+            </li>
+            <li class="flex items-center space-x-3">
+                <span class="rounded-full p-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/pink-tick.svg" alt=""></span>
+                <span>Bold Brands</span>
+            </li>
+        </ul>
+
+        <!-- Info Boxes -->
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mt-6">
+            <div class="border p-4 rounded w-full sm:w-1/2">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="text-green-500 text-2xl"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/experience-icon.svg"
+                            alt=""></span>
+                    <h4 class="font-bold">Experience</h4>
+                </div>
+                <p class="text-gray-600 text-sm">Bringing 10+ years of expert experience to the table.</p>
+            </div>
+            <div class="border p-4 rounded w-full sm:w-1/2">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="text-green-500 text-2xl"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-icon.svg" alt=""></span>
+                    <h4 class="font-bold">Awards Winner</h4>
+                </div>
+                <p class="text-gray-600 text-sm">Over the past 10 years, we've earned multiple awards.</p>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <button class="bg-secondary hover:bg-primary text-white px-6 py-3 rounded-full mt-6">
+            Get Started Today
+        </button>
+    </div>
+</section>
+
+<section class="bg-gray-50 px-10 py-16 text-center">
+    <!-- Section Header -->
+    <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2 text-center">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <span>We Are Expertise In</span>
+    </p>
+    <h2 class="text-3xl font-bold mb-10">We Provide Professional <br> Business Solutions.</h2>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brand-design-img.svg" alt="Branding Design" class="rounded-md mb-4">
+            <h3 class="font-bold text-lg mb-2">Branding Design</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+                Create a lasting first impression with a powerful brand identity. From logo design to brand
+                strategy, we make your business unforgettable.
+            </p>
+            <a href="#"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                <span>Get Started Today</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-4 h-4">
+                        <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+            </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/graphic-dimg.svg" alt="Graphic Design" class="rounded-md mb-4">
+            <h3 class="font-bold text-lg mb-2">Graphic Design</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+                Deliver your message through bold, creative visuals. We design stunning assets for web, social
+                media, ads, and beyond.
+            </p>
+            <a href="#"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                <span>Get Started Today</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-4 h-4">
+                        <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/web-dev-img.svg" alt="Web Development" class="rounded-md mb-4">
+            <h3 class="font-bold text-lg mb-2">Web Development</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+                We build fast, secure, and responsive websites using modern technologies — optimized for SEO,
+                performance, and usability across devices.
+            </p>
+            <a href="#"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                <span>Get Started Today</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-4 h-4">
+                        <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="px-10 py-16 text-center">
+    <!-- Section Header -->
+    <div class="text-center mb-8">
+        <div class="flex items-center justify-center space-x-2 text-sm font-semibold mb-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <span>What we're offering</span>
+        </div>
+        <h2 class="text-3xl font-bold mb-10">Services we’re providing <br> to our customers</h2>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <!-- Card 1 - Active -->
+        <div class="bg-primary hover:bg-secondary text-white p-8 rounded-2xl flex flex-col items-center">
+            <div class="text-4xl mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/product-icon.svg" alt=""></div>
+            <h3 class="font-bold text-lg mb-2">Product development</h3>
+            <p class="text-sm">Website or <br> App development</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
+            <div class="text-4xl text-primary mb-4 group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ui-ux-icon.svg"
+                    alt=""></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-white">UI/UX designing</h3>
+            <p class="text-sm text-gray-600 group-hover:text-white">Wireframing and <br> Prototyping</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
+            <div class="text-4xl text-primary mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/data-analysis-icon.svg" alt=""></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-white">Data analysis</h3>
+            <p class="text-sm text-gray-600 group-hover:text-white">Turning data <br> into insights</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
+            <div class="text-4xl text-primary mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit-icon.svg" alt=""></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-white">Content management</h3>
+            <p class="text-sm text-gray-600 group-hover:text-white">Clear and consistent <br> content for the
+                product</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#1E2143] px-10 py-16 text-white flex flex-col lg:flex-row items-center justify-between">
+    <!-- Left Image -->
+    <div class="lg:w-1/2 relative mb-10 lg:mb-0">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why-chose-us-img.svg" alt="Why Choose Us" class="w-full max-w-sm mx-auto">
+        <!-- Background splashes can be positioned using absolute divs or included in the image -->
+    </div>
+
+    <!-- Right Content -->
+    <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+
+        <p class="text-sm font-semibold flex items-center gap-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <span>Why Choose Us</span>
+        </p>
+        <h2 class="text-3xl font-bold leading-snug">
+            Take on any Challenge <br> of the Tech World
+        </h2>
+        <ul class="space-y-3">
+            <li class="flex items-center justify-center lg:justify-start space-x-3">
+                <span class="rounded-full p-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Checklist-Circle.svg" alt=""></span>
+                <span>Passionate</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start space-x-3">
+                <span class="rounded-full p-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Checklist-Circle.svg" alt=""></span>
+                <span>Professional</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start space-x-3">
+                <span class="rounded-full p-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Checklist-Circle.svg" alt=""></span>
+                <span>Support</span>
+            </li>
+        </ul>
+        <button
+            class="bg-secondary hover:bg-primary text-white px-8 py-3 rounded-full font-semibold">
+            Get Started
+        </button>
+    </div>
+</section>
+
+<section class="px-10 py-16 max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
+        <div>
+            <p class="text-sm font-semibold mb-2 flex items-center gap-2">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+                <span>Our Projects</span>
+            </p>
+            <h2 class="text-3xl font-bold leading-snug">You can check our projects <br> as inspirations.</h2>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full inline-block">
+                More Work
+            </a>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-1.svg" alt="Project 1" class="rounded-md shadow">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-2.svg" alt="Project 2" class="rounded-md shadow">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-3.svg" alt="Project 3" class="rounded-md shadow">
+    </div>
+</section>
+
+<section class="bg-gray-50 px-10 py-16 text-center">
+    <!-- Header -->
+    <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <span>Testimonial</span>
+    </p>
+    <h2 class="text-3xl font-bold mb-10">What Our Client Say’s</h2>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div class="bg-gradient-to-br from-green-200 to-purple-300 p-6 rounded-lg">
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/john-carter.svg" alt="John Carter" class="w-12 h-12 rounded-full">
+                <div class="text-left">
+                    <h4 class="font-bold">John Carter</h4>
+                    <p class="text-sm text-gray-700">Marketing Lead at Google</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-left">
+                <div class="text-yellow-400 text-lg mb-2">★★★★★</div>
+                <hr class="mb-2">
+                <p class="text-gray-600 text-sm">
+                    Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer
+                    to galley of type and make a type specimen book. 😇
+                </p>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gradient-to-br from-green-200 to-purple-300 p-6 rounded-lg">
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/peeter-pawl.svg" alt="Peeter Pawl" class="w-12 h-12 rounded-full">
+                <div class="text-left">
+                    <h4 class="font-bold">Peeter Pawl</h4>
+                    <p class="text-sm text-gray-700">Designer</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow text-left">
+                <div class="text-yellow-400 text-lg mb-2">★★★★★</div>
+                <hr class="mb-2">
+                <p class="text-gray-600 text-sm">
+                    Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer
+                    to galley of type and make a type specimen book. 😇
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full mt-10">
+        View More
+    </button>
+</section>
+
+<section class="px-10 py-16 text-center">
+    <!-- Header -->
+    <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <span>Contact</span>
+    </p>
+    <h2 class="text-3xl font-bold mb-10">Contact Us For Any Inquiry</h2>
+
+    <!-- Contact Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Address -->
+        <div
+            class="bg-primary text-white p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
+            <div class="text-4xl"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/location-large.svg" alt=""></div>
+            <h4 class="font-bold">ADDRESS</h4>
+            <p>Pakistan, Islamabad</p>
+        </div>
+
+        <!-- Phone -->
+        <div
+            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
+            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone-color.svg"
+                    alt=""></div>
+            <h4 class="font-bold text-primary group-hover:text-white">PHONE</h4>
+            <p class="text-primary group-hover:text-white">01234567890</p>
+        </div>
+
+        <!-- Email -->
+        <div
+            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
+            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/email-color.svg"
+                    alt=""></div>
+            <h4 class="font-bold text-primary group-hover:text-white">EMAIL</h4>
+            <p class="text-primary group-hover:text-white">info@netvio.com</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#2C2D4A] px-10 py-16 text-center text-white">
+    <!-- Header -->
+    <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <span>Send Message</span>
+    </p>
+    <h2 class="text-3xl font-bold mb-10">Send Us Your Message Any Time</h2>
+
+    <!-- Contact Form Container -->
+    <div class="max-w-7xl mx-auto bg-white rounded-md flex flex-col lg:flex-row overflow-hidden text-gray-800">
+        <!-- Left Info -->
+        <div class="bg-green-400 p-10 flex flex-col justify-between lg:w-1/2 text-[#2C2D4A]">
+            <p class="mb-6 text-left">
+                We’re here to connect, collaborate, and support your tech journey.
+                Whether you have questions about our products, need technical guidance,
+                or are interested in partnership opportunities, we’re always ready to help.
+                If you’d like to learn more about our platform, services, or how we can
+                work together, feel free to reach out.
+            </p>
+            <button class="bg-[#2C2D4A] hover:bg-primary text-white px-6 py-3 rounded-full w-max">
+                Request A Quote
+            </button>
+        </div>
+
+        <!-- Right Form -->
+        <form class="p-10 bg-white lg:w-1/2 space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="Enter Name"
+                    class="bg-[#2C2D4A] text-white px-4 py-3 rounded-full w-full focus:outline-none">
+                <input type="text" placeholder="Enter Company Name"
+                    class="bg-[#2C2D4A] text-white px-4 py-3 rounded-full w-full focus:outline-none">
+                <input type="text" placeholder="Enter Phone Number"
+                    class="bg-[#2C2D4A] text-white px-4 py-3 rounded-full w-full focus:outline-none">
+                <input type="email" placeholder="Enter Email"
+                    class="bg-[#2C2D4A] text-white px-4 py-3 rounded-full w-full focus:outline-none">
+            </div>
+            <textarea placeholder="Your Message" rows="5"
+                class="bg-[#2C2D4A] text-white px-4 py-3 rounded-2xl w-full focus:outline-none"></textarea>
+            <button type="submit"
+                class="bg-secondary hover:bg-primary hover:text-white text-[#2C2D4A] px-8 py-3 rounded-full font-semibold">
+                Send Message Now
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="px-10 py-16 text-center">
+    <!-- Header -->
+    <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <span>Subscribe</span>
+    </p>
+    <h2 class="text-3xl font-bold mb-10">Be the First to Know</h2>
+
+    <!-- Subscribe Box -->
+    <div class="bg-[#593FFB] text-white max-w-4xl mx-auto p-10 rounded-lg space-y-6">
+        <p>Join Our Mailing List & to get our news.</p>
+        <form class="flex flex-col sm:flex-row justify-center">
+            <input type="email" placeholder="your email address"
+                class="px-4 py-3 text-white border w-full sm:w-2/3 rounded-l-md focus:outline-none">
+            <button type="submit"
+                class="bg-secondary text-white px-6 py-3 rounded-r-md mt-4 sm:mt-0 transform hover:scale-105 transition duration-300">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+
+<?php
+get_footer();
