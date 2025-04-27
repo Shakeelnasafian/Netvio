@@ -1,0 +1,22 @@
+@import "tailwindcss";
+/* Force custom colors */
+@layer utilities {
+    .bg-primary {
+      background-color: #593FFB;
+    }
+    .text-primary {
+      color: #593FFB;
+    }
+    .bg-secondary {
+      background-color: #40DDB6;
+    }
+    .text-secondary {
+      color: #40DDB6;
+    }
+    .hover\:bg-primary:hover {
+      background-color: #593FFB;
+    }
+    .hover\:bg-secondary:hover {
+      background-color: #40DDB6;
+    }
+  }
