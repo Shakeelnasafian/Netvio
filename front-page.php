@@ -39,7 +39,10 @@ background-size: cover; background-position: center;">
         <div class="flex items-center space-x-6">
             <button class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full">Get Started</button>
             <button class="flex items-center space-x-2">
-                <span class="w-3 h-3 bg-black rounded-full inline-block"></span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.66 13.73L13.38 14.47L12.1 15.21C10.45 16.16 9.1 15.38 9.1 13.48V12V10.52C9.1 8.61 10.45 7.84 12.1 8.79L13.38 9.53L14.66 10.27C16.31 11.22 16.31 12.78 14.66 13.73Z" fill="#282C4B" />
+                </svg>
+
                 <span>Watch Video</span>
             </button>
         </div>
@@ -210,8 +213,7 @@ background-size: cover; background-position: center;">
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto" onmouseenter="changeSvgColor(this)"
-        onmouseleave="resetSvgColor(this)">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
         <!-- Card 1 - Active -->
         <div class="bg-primary hover:bg-secondary text-white p-8 rounded-2xl flex flex-col items-center">
             <div class="text-4xl mb-4">
@@ -228,7 +230,7 @@ background-size: cover; background-position: center;">
         </div>
 
         <!-- Card 2 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
             onmouseleave="resetSvgColor(this)">
             <div class="text-4xl text-primary mb-4 group-hover:text-white">
                 <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +246,7 @@ background-size: cover; background-position: center;">
         </div>
 
         <!-- Card 3 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
             onmouseleave="resetSvgColor(this)">
             <div class="text-4xl text-primary mb-4">
                 <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +265,7 @@ background-size: cover; background-position: center;">
         </div>
 
         <!-- Card 4 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
             onmouseleave="resetSvgColor(this)">
             <div class="text-4xl text-primary mb-4">
                 <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -426,18 +428,27 @@ background-size: cover; background-position: center;">
 
         <!-- Phone -->
         <div
-            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
-            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone-color.svg"
-                    alt=""></div>
+            class="border border-[#ccc] p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary group-hover:text-white">
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.0675 16.9287C11.1275 22.9425 16.0575 27.8512 22.0713 30.9325L26.7463 26.2575C27.32 25.6838 28.17 25.4925 28.9137 25.7475C31.2938 26.5337 33.865 26.9587 36.5 26.9587C37.6688 26.9587 38.625 27.915 38.625 29.0837V36.5C38.625 37.6688 37.6688 38.625 36.5 38.625C16.5462 38.625 0.375 22.4538 0.375 2.5C0.375 1.33125 1.33125 0.375 2.5 0.375H9.9375C11.1062 0.375 12.0625 1.33125 12.0625 2.5C12.0625 5.15625 12.4875 7.70625 13.2737 10.0863C13.5075 10.83 13.3375 11.6588 12.7425 12.2537L8.0675 16.9287Z" fill="#593FFB" />
+                </svg>
+            </div>
             <h4 class="font-bold text-primary group-hover:text-white">PHONE</h4>
             <p class="text-primary group-hover:text-white">01234567890</p>
         </div>
 
         <!-- Email -->
         <div
-            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
-            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/email-color.svg"
-                    alt=""></div>
+            class="border border-[#ccc] p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary group-hover:text-white">
+                <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 26.5C2.60625 26.5 1.84142 26.182 1.2055 25.5461C0.569583 24.9102 0.251083 24.1448 0.25 23.25V3.75C0.25 2.85625 0.5685 2.09142 1.2055 1.4555C1.8425 0.819583 2.60733 0.501083 3.5 0.5H29.5C30.3937 0.5 31.1591 0.8185 31.7961 1.4555C32.4331 2.0925 32.7511 2.85733 32.75 3.75V23.25C32.75 24.1437 32.432 24.9091 31.7961 25.5461C31.1602 26.1831 30.3948 26.5011 29.5 26.5H3.5ZM16.5 15.125L29.5 7V3.75L16.5 11.875L3.5 3.75V7L16.5 15.125Z" fill="#593FFB" />
+                </svg>
+
+            </div>
             <h4 class="font-bold text-primary group-hover:text-white">EMAIL</h4>
             <p class="text-primary group-hover:text-white">info@netvio.com</p>
         </div>
@@ -506,7 +517,7 @@ background-size: cover; background-position: center;">
     <div class="bg-[#593FFB] text-white max-w-4xl mx-auto p-10 rounded-lg space-y-6">
         <p>Join Our Mailing List & to get our news.</p>
         <form class="flex flex-col sm:flex-row justify-center">
-            <input type="email" placeholder="your email address"
+            <input type="email" placeholder="Your email address"
                 class="px-4 py-3 text-white border w-full sm:w-2/3 rounded-l-md focus:outline-none">
             <button type="submit"
                 class="bg-secondary text-white px-6 py-3 rounded-r-md mt-4 sm:mt-0 transform hover:scale-105 transition duration-300">
@@ -515,38 +526,6 @@ background-size: cover; background-position: center;">
         </form>
     </div>
 </section>
-
-<script>
-    function changeSvgColor(div) {
-        const svg = div.querySelector('svg');
-        if (!svg) return;
-
-        const paths = svg.querySelectorAll('path');
-        paths.forEach(path => {
-            const currentStroke = path.getAttribute('stroke');
-            if (currentStroke && currentStroke.toUpperCase() === '#593FFB') {
-                path.setAttribute('data-original-stroke', '#593FFB');
-                path.setAttribute('stroke', '#FFF');
-            } else if (currentStroke && currentStroke.toUpperCase() === 'WHITE') {
-                path.setAttribute('data-original-stroke', 'white');
-                path.setAttribute('stroke', '#FFF');
-            }
-        });
-    }
-
-    function resetSvgColor(div) {
-        const svg = div.querySelector('svg');
-        if (!svg) return;
-
-        const paths = svg.querySelectorAll('path');
-        paths.forEach(path => {
-            const originalStroke = path.getAttribute('data-original-stroke');
-            if (originalStroke) {
-                path.setAttribute('stroke', originalStroke);
-            }
-        });
-    }
-</script>
 
 <?php
 get_footer();
