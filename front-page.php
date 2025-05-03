@@ -39,7 +39,10 @@ background-size: cover; background-position: center;">
         <div class="flex items-center space-x-6">
             <button class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full">Get Started</button>
             <button class="flex items-center space-x-2">
-                <span class="w-3 h-3 bg-black rounded-full inline-block"></span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.66 13.73L13.38 14.47L12.1 15.21C10.45 16.16 9.1 15.38 9.1 13.48V12V10.52C9.1 8.61 10.45 7.84 12.1 8.79L13.38 9.53L14.66 10.27C16.31 11.22 16.31 12.78 14.66 13.73Z" fill="#282C4B" />
+                </svg>
+
                 <span>Watch Video</span>
             </button>
         </div>
@@ -77,7 +80,9 @@ background-size: cover; background-position: center;">
     <!-- Right Side -->
     <div class="lg:w-1/2 space-y-6">
         <p class="text-sm font-semibold flex items-center gap-2">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="12" fill="#40DDB6" />
+            </svg>
             <span>Welcome To NetvioTech</span>
         </p>
         <h2 class="text-3xl font-bold leading-snug">We Care About Your Business Plan.</h2>
@@ -127,7 +132,9 @@ background-size: cover; background-position: center;">
 <section class="bg-gray-50 px-10 py-16 text-center">
     <!-- Section Header -->
     <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="12" height="12" fill="#40DDB6" />
+        </svg>
         <span>We Are Expertise In</span>
     </p>
     <h2 class="text-3xl font-bold mb-10">We Provide Professional <br> Business Solutions.</h2>
@@ -197,7 +204,9 @@ background-size: cover; background-position: center;">
     <!-- Section Header -->
     <div class="text-center mb-8">
         <div class="flex items-center justify-center space-x-2 text-sm font-semibold mb-2">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="12" fill="#40DDB6" />
+            </svg>
             <span>What we're offering</span>
         </div>
         <h2 class="text-3xl font-bold mb-10">Services we’re providing <br> to our customers</h2>
@@ -207,29 +216,65 @@ background-size: cover; background-position: center;">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
         <!-- Card 1 - Active -->
         <div class="bg-primary hover:bg-secondary text-white p-8 rounded-2xl flex flex-col items-center">
-            <div class="text-4xl mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/product-icon.svg" alt=""></div>
+            <div class="text-4xl mb-4">
+                <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.75 45L49.25 45C51.3211 45 53 43.3211 53 41.25L53 15C53 12.9289 51.3211 11.25 49.25 11.25L11.75 11.25C9.67893 11.25 8 12.9289 8 15L8 41.25C8 43.3211 9.67893 45 11.75 45Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M38 52.5H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8 35.625H53" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M30.5 45V52.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
             <h3 class="font-bold text-lg mb-2">Product development</h3>
             <p class="text-sm">Website or <br> App development</p>
         </div>
 
         <!-- Card 2 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
-            <div class="text-4xl text-primary mb-4 group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ui-ux-icon.svg"
-                    alt=""></div>
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary mb-4 group-hover:text-white">
+                <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.5414 6.9471L7.45083 38.0377C6.71859 38.7699 6.71859 39.9571 7.45083 40.6894L19.7992 53.0378C20.5315 53.77 21.7186 53.77 22.4509 53.0378L53.5415 21.9472C54.2737 21.2149 54.2737 20.0277 53.5415 19.2955L41.1931 6.9471C40.4608 6.21486 39.2737 6.21486 38.5414 6.9471Z" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M31.4375 14.0625L38.9375 21.5625" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M23 22.5L30.5 30" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.5625 30.9375L22.0625 38.4375" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
             <h3 class="font-bold text-lg mb-2 group-hover:text-white">UI/UX designing</h3>
             <p class="text-sm text-gray-600 group-hover:text-white">Wireframing and <br> Prototyping</p>
         </div>
 
         <!-- Card 3 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
-            <div class="text-4xl text-primary mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/data-analysis-icon.svg" alt=""></div>
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary mb-4">
+                <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.75 43.125V16.875" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M49.25 16.875V43.125" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M23 30V33.75" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M30.5 28.125V33.75" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M38 26.25V33.75" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M51.125 9.375H9.875C8.83947 9.375 8 10.2145 8 11.25V15C8 16.0355 8.83947 16.875 9.875 16.875H51.125C52.1605 16.875 53 16.0355 53 15V11.25C53 10.2145 52.1605 9.375 51.125 9.375Z" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8 43.125H53" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
             <h3 class="font-bold text-lg mb-2 group-hover:text-white">Data analysis</h3>
             <p class="text-sm text-gray-600 group-hover:text-white">Turning data <br> into insights</p>
         </div>
 
         <!-- Card 4 -->
-        <div class="border p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group">
-            <div class="text-4xl text-primary mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit-icon.svg" alt=""></div>
+        <div class="border border-[#ccc] p-8 rounded-2xl flex flex-col items-center hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary mb-4">
+                <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5 37.5H23V30L45.5 7.5L53 15L30.5 37.5Z" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M39.875 13.125L47.375 20.625" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M51.125 28.125V48.75C51.125 49.2473 50.9275 49.7242 50.5758 50.0758C50.2242 50.4275 49.7473 50.625 49.25 50.625H11.75C11.2527 50.625 10.7758 50.4275 10.4242 50.0758C10.0725 49.7242 9.875 49.2473 9.875 48.75V11.25C9.875 10.7527 10.0725 10.2758 10.4242 9.92418C10.7758 9.57254 11.2527 9.375 11.75 9.375H32.375" stroke="#593FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
             <h3 class="font-bold text-lg mb-2 group-hover:text-white">Content management</h3>
             <p class="text-sm text-gray-600 group-hover:text-white">Clear and consistent <br> content for the
                 product</p>
@@ -248,7 +293,9 @@ background-size: cover; background-position: center;">
     <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
 
         <p class="text-sm font-semibold flex items-center gap-2">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="12" fill="#40DDB6" />
+            </svg>
             <span>Why Choose Us</span>
         </p>
         <h2 class="text-3xl font-bold leading-snug">
@@ -280,7 +327,9 @@ background-size: cover; background-position: center;">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
         <div>
             <p class="text-sm font-semibold mb-2 flex items-center gap-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="12" fill="#40DDB6" />
+                </svg>
                 <span>Our Projects</span>
             </p>
             <h2 class="text-3xl font-bold leading-snug">You can check our projects <br> as inspirations.</h2>
@@ -303,7 +352,9 @@ background-size: cover; background-position: center;">
 <section class="bg-gray-50 px-10 py-16 text-center">
     <!-- Header -->
     <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="12" height="12" fill="#40DDB6" />
+        </svg>
         <span>Testimonial</span>
     </p>
     <h2 class="text-3xl font-bold mb-10">What Our Client Say’s</h2>
@@ -358,7 +409,9 @@ background-size: cover; background-position: center;">
 <section class="px-10 py-16 text-center">
     <!-- Header -->
     <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="12" height="12" fill="#40DDB6" />
+        </svg>
         <span>Contact</span>
     </p>
     <h2 class="text-3xl font-bold mb-10">Contact Us For Any Inquiry</h2>
@@ -375,18 +428,27 @@ background-size: cover; background-position: center;">
 
         <!-- Phone -->
         <div
-            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
-            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone-color.svg"
-                    alt=""></div>
+            class="border border-[#ccc] p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary group-hover:text-white">
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.0675 16.9287C11.1275 22.9425 16.0575 27.8512 22.0713 30.9325L26.7463 26.2575C27.32 25.6838 28.17 25.4925 28.9137 25.7475C31.2938 26.5337 33.865 26.9587 36.5 26.9587C37.6688 26.9587 38.625 27.915 38.625 29.0837V36.5C38.625 37.6688 37.6688 38.625 36.5 38.625C16.5462 38.625 0.375 22.4538 0.375 2.5C0.375 1.33125 1.33125 0.375 2.5 0.375H9.9375C11.1062 0.375 12.0625 1.33125 12.0625 2.5C12.0625 5.15625 12.4875 7.70625 13.2737 10.0863C13.5075 10.83 13.3375 11.6588 12.7425 12.2537L8.0675 16.9287Z" fill="#593FFB" />
+                </svg>
+            </div>
             <h4 class="font-bold text-primary group-hover:text-white">PHONE</h4>
             <p class="text-primary group-hover:text-white">01234567890</p>
         </div>
 
         <!-- Email -->
         <div
-            class="border border-primary p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group">
-            <div class="text-4xl text-primary group-hover:text-white"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/email-color.svg"
-                    alt=""></div>
+            class="border border-[#ccc] p-10 rounded-md flex flex-col items-center space-y-4 hover:bg-secondary group" onmouseenter="changeSvgColor(this)"
+            onmouseleave="resetSvgColor(this)">
+            <div class="text-4xl text-primary group-hover:text-white">
+                <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 26.5C2.60625 26.5 1.84142 26.182 1.2055 25.5461C0.569583 24.9102 0.251083 24.1448 0.25 23.25V3.75C0.25 2.85625 0.5685 2.09142 1.2055 1.4555C1.8425 0.819583 2.60733 0.501083 3.5 0.5H29.5C30.3937 0.5 31.1591 0.8185 31.7961 1.4555C32.4331 2.0925 32.7511 2.85733 32.75 3.75V23.25C32.75 24.1437 32.432 24.9091 31.7961 25.5461C31.1602 26.1831 30.3948 26.5011 29.5 26.5H3.5ZM16.5 15.125L29.5 7V3.75L16.5 11.875L3.5 3.75V7L16.5 15.125Z" fill="#593FFB" />
+                </svg>
+
+            </div>
             <h4 class="font-bold text-primary group-hover:text-white">EMAIL</h4>
             <p class="text-primary group-hover:text-white">info@netvio.com</p>
         </div>
@@ -396,7 +458,9 @@ background-size: cover; background-position: center;">
 <section class="bg-[#2C2D4A] px-10 py-16 text-center text-white">
     <!-- Header -->
     <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="12" height="12" fill="#40DDB6" />
+        </svg>
         <span>Send Message</span>
     </p>
     <h2 class="text-3xl font-bold mb-10">Send Us Your Message Any Time</h2>
@@ -442,7 +506,9 @@ background-size: cover; background-position: center;">
 <section class="px-10 py-16 text-center">
     <!-- Header -->
     <p class="text-sm font-semibold mb-2 flex items-center justify-center gap-2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/green-dot.svg" alt="">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="12" height="12" fill="#40DDB6" />
+        </svg>
         <span>Subscribe</span>
     </p>
     <h2 class="text-3xl font-bold mb-10">Be the First to Know</h2>
@@ -451,7 +517,7 @@ background-size: cover; background-position: center;">
     <div class="bg-[#593FFB] text-white max-w-4xl mx-auto p-10 rounded-lg space-y-6">
         <p>Join Our Mailing List & to get our news.</p>
         <form class="flex flex-col sm:flex-row justify-center">
-            <input type="email" placeholder="your email address"
+            <input type="email" placeholder="Your email address"
                 class="px-4 py-3 text-white border w-full sm:w-2/3 rounded-l-md focus:outline-none">
             <button type="submit"
                 class="bg-secondary text-white px-6 py-3 rounded-r-md mt-4 sm:mt-0 transform hover:scale-105 transition duration-300">
