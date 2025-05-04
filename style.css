@@ -9,3 +9,18 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: netvio
 */
+.prose pre {
+    background-color: #1e293b; /* dark background */
+    color: #f8f8f2;            /* light text */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+.prose code {
+    background-color: #f1f5f9; /* light background for inline code */
+    color: #e11d48;            /* pink-ish text */
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
