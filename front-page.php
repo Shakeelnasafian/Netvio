@@ -436,7 +436,7 @@ background-size: cover; background-position: center;">
                 </svg>
             </div>
             <h4 class="font-bold text-primary group-hover:text-white">PHONE</h4>
-            <p class="text-primary group-hover:text-white">01234567890</p>
+            <p class="text-primary group-hover:text-white">+923261333660</p>
         </div>
 
         <!-- Email -->
