@@ -3,6 +3,7 @@
 function netvio_enqueue_assets()
 {
     wp_enqueue_style('netvio-tailwind', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
+    wp_enqueue_style('netvio-css', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 
     // Enqueue menu.js
     wp_enqueue_script('netvio-menu', get_template_directory_uri() . '/assets/js/menu.js', array(), time());
