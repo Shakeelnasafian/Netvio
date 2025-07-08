@@ -62,7 +62,7 @@
 
         <!-- Bottom Bar -->
         <div class="border-t border-white mt-10 pt-4 text-center text-sm">
-            Copyright © 2025 Netvio.Tech | Powered by Netvio.Tech
+            <?php printf( esc_html__('Copyright © %s Netvio.Tech | Powered by Netvio.Tech', 'netvio'), date('Y') ); ?>
         </div>
     </footer>
 
