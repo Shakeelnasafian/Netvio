@@ -1,4 +1,10 @@
 <?php
+// Load theme textdomain for translations
+function netvio_load_textdomain() {
+    load_theme_textdomain('netvio', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'netvio_load_textdomain');
+
 
 function netvio_enqueue_assets()
 {
@@ -16,7 +22,11 @@ function netvio_theme_setup()
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('custom-logo');
-    add_theme_support('menus');
+    // Register navigation menus
+    register_nav_menus([
+        'primary' => __('Primary Menu', 'netvio'),
+        'footer'  => __('Footer Menu', 'netvio'),
+    ]);
 }
 add_action('after_setup_theme', 'netvio_theme_setup');
 

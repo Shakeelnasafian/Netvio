@@ -44,18 +44,20 @@
     </div>
 
     <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-8 text-gray-700">
-        <li><a href="#" class="text-primary font-semibold">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="/blogs">Blog</a></li>
-        <li><a href="#">Contact Us</a></li>
-    </ul>
+    <?php
+    wp_nav_menu([
+        'theme_location' => 'primary',
+        'container' => false,
+        'menu_class' => 'hidden md:flex space-x-8 text-gray-700',
+        'link_before' => '<span class="text-primary font-semibold">',
+        'link_after' => '</span>',
+        'fallback_cb' => false,
+    ]);
+    ?>
 
     <!-- Desktop Button -->
     <button class="hidden md:block border-2 border-primary text-primary px-4 py-2 rounded-full hover:bg-purple-100">
-        Let’s Talk
+        <?php esc_html_e('Let\'s Talk', 'netvio'); ?>
     </button>
 
     <!-- Hamburger Icon -->
@@ -70,18 +72,20 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md">
-        <ul class="flex flex-col space-y-4 p-6 text-gray-700">
-            <li><a href="#" class="text-primary font-semibold">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li>
-                <button class="w-full border-2 border-primary text-primary px-4 py-2 rounded-full hover:bg-purple-100">
-                    Let’s Talk
-                </button>
-            </li>
-        </ul>
+        <?php
+        wp_nav_menu([
+            'theme_location' => 'primary',
+            'container' => false,
+            'menu_class' => 'flex flex-col space-y-4 p-6 text-gray-700',
+            'link_before' => '<span class="text-primary font-semibold">',
+            'link_after' => '</span>',
+            'fallback_cb' => false,
+        ]);
+        ?>
+        <div class="p-6">
+            <button class="w-full border-2 border-primary text-primary px-4 py-2 rounded-full hover:bg-purple-100">
+                <?php esc_html_e('Let’s Talk', 'netvio'); ?>
+            </button>
+        </div>
     </div>
 </nav>
