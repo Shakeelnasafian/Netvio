@@ -1,93 +1,5 @@
 <?php get_header(); ?>
 
-<style>
-    .blog-container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 40px 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .blog-title {
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 40px;
-        color: #1a202c;
-    }
-
-    .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 30px;
-    }
-
-    .blog-card {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .blog-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .blog-thumb {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-
-    .blog-content {
-        padding: 20px;
-    }
-
-    .blog-post-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin: 0 0 12px;
-        color: #2d3748;
-    }
-
-    .blog-excerpt {
-        color: #4a5568;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    .blog-date {
-        font-size: 0.85rem;
-        color: #a0aec0;
-    }
-
-    .nv-pagination {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .nv-pagination .page-numbers {
-        display: inline-block;
-        padding: 10px 15px;
-        margin: 0 5px;
-        background: #edf2f7;
-        color: #2d3748;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background 0.2s;
-    }
-
-    .nv-pagination .current,
-    .nv-pagination .page-numbers:hover {
-        background: #2d3748;
-        color: white;
-    }
-</style>
-
 <div class="blog-container">
     <h1 class="blog-title"><?php single_post_title(); ?></h1>
     <div class="blog-grid">
@@ -114,7 +26,7 @@
                                     <rect width="200" height="150" fill="#f3f4f6" />
                                     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
                                         fill="#a0aec0" font-size="16" font-family="Arial, sans-serif">
-                                        No Image
+                                        <?php esc_html_e( 'No Image', 'netvio' ); ?>
                                     </text>
                                 </svg>
                             </div>
@@ -141,7 +53,7 @@
             ]);
             echo '</div>';
         else:
-            echo '<p>No blog posts found.</p>';
+            echo '<p>' . esc_html__( 'No blog posts found.', 'netvio' ) . '</p>';
         endif;
         wp_reset_postdata();
         ?>
