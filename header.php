@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetvioTech</title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <?php wp_head(); ?>
 </head>
 
-<body class="bg-white text-gray-800">
+<body <?php body_class( 'bg-white text-gray-800' ); ?>>
+    <a class="skip-link screen-reader-text" href="#primary">
+        <?php esc_html_e( 'Skip to content', 'netvio' ); ?>
+    </a>
 
     <!-- Top Bar -->
     <div class="hidden sm:flex bg-gray-800 text-white text-sm justify-between px-6 py-2">

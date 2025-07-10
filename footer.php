@@ -7,41 +7,41 @@
 
             <!-- Pages -->
             <div>
-                <h4 class="font-semibold mb-2">Pages</h4>
+                <h4 class="font-semibold mb-2"><?php esc_html_e( 'Pages', 'netvio' ); ?></h4>
                 <ul class="space-y-1 text-sm">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Terms & Condition</a></li>
-                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#"><?php esc_html_e( 'About Us', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'Contact Us', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'Services', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'Terms & Condition', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'Privacy & Policy', 'netvio' ); ?></a></li>
                 </ul>
             </div>
 
             <!-- Learn More -->
             <div>
-                <h4 class="font-semibold mb-2">Learn More</h4>
+                <h4 class="font-semibold mb-2"><?php esc_html_e( 'Learn More', 'netvio' ); ?></h4>
                 <ul class="space-y-1 text-sm">
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#"><?php esc_html_e( 'Blogs', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'News', 'netvio' ); ?></a></li>
+                    <li><a href="#"><?php esc_html_e( 'Reviews', 'netvio' ); ?></a></li>
                 </ul>
             </div>
 
             <!-- Contact & Social -->
             <div>
-                <h4 class="font-semibold mb-2">Contact</h4>
+                <h4 class="font-semibold mb-2"><?php esc_html_e( 'Contact', 'netvio' ); ?></h4>
                 <ul class="space-y-2 text-sm">
                     <li class="flex items-center space-x-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/email.svg" class="w-3" alt="">
-                        <span>info@netvio.com</span>
+                        <span><?php esc_html_e( 'info@netvio.com', 'netvio' ); ?></span>
                     </li>
                     <li class="flex items-center space-x-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.svg" class="w-3" alt="">
-                        <span>01234567890</span>
+                        <span><?php esc_html_e( '01234567890', 'netvio' ); ?></span>
                     </li>
                     <li class="flex items-center space-x-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/location.svg" class="w-3" alt="">
-                        <span>Pakistan, Islamabad</span>
+                        <span><?php esc_html_e( 'Pakistan, Islamabad', 'netvio' ); ?></span>
                     </li>
                 </ul>
 
