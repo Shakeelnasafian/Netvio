@@ -1,0 +1,90 @@
+<div class="min-h-screen bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Category Header -->
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center space-x-2 mb-4">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 7h10v10H7z" />
+        </svg>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
+          Category Name
+        </h1>
+      </div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+        Short description of the category goes here, explaining what readers can find.
+      </p>
+      <div class="text-gray-500">
+        5 articles in this category
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-12">
+      <!-- Main Content -->
+      <main class="flex-1">
+        <!-- Category Posts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Loop through posts -->
+          <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <a href="/blog/sample-post">
+              <img
+                src="https://via.placeholder.com/600x400"
+                alt="Post Title"
+                class="w-full h-48 object-cover"
+              />
+            </a>
+            <div class="p-6">
+              <div class="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                <span>July 26, 2025</span>
+                <span>•</span>
+                <span>4 min read</span>
+              </div>
+              <a href="/blog/sample-post">
+                <h2 class="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                  Post Title Example
+                </h2>
+              </a>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                A short excerpt for this category post.
+              </p>
+              <div class="flex items-center justify-between">
+                <a href="/blog/sample-post"
+                  class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                  Read More
+                </a>
+                <a href="/blog/category/sample-category"
+                  class="text-sm text-blue-600 hover:text-blue-800 font-medium">
+                  Category Name
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Repeat for more posts -->
+        </div>
+
+        <!-- No Articles Found (optional, show when loop empty) -->
+        <div class="bg-white rounded-xl shadow-lg p-12 text-center hidden">
+          <svg class="w-12 h-12 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M7 7h10v10H7z" />
+          </svg>
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">No Articles Found</h2>
+          <p class="text-gray-600 mb-6">
+            There are currently no articles in this category.
+          </p>
+          <a
+            href="/blog"
+            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            Browse All Articles
+          </a>
+        </div>
+
+        <!-- Pagination -->
+        <?php /* include pagination.php or use paginate_links() */ ?>
+      </main>
+
+      <!-- Sidebar -->
+      <?php /* include sidebar.php */ ?>
+    </div>
+  </div>
+</div>
