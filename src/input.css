@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 /* Force custom colors */
 @layer utilities {
     .bg-primary {
@@ -20,3 +21,5 @@
       background-color: #40DDB6;
     }
   }
+
+  
