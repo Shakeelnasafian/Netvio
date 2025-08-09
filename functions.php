@@ -17,6 +17,8 @@ function netvio_enqueue_assets()
 
     // Enqueue menu.js
     wp_enqueue_script('netvio-menu', get_template_directory_uri() . '/assets/js/menu.js', array(), time());
+
+    wp_enqueue_script('tw-calculators', get_stylesheet_directory_uri() . '/assets/js/calculators.js', array(), time());
 }
 add_action('wp_enqueue_scripts', 'netvio_enqueue_assets');
 
