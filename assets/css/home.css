@@ -83,3 +83,14 @@
     background: #2d3748;
     color: white;
 }
+
+/* Basic prose styles */
+.nv-prose { font-size: 1.0625rem; line-height: 1.75; }
+.nv-prose p { margin: 1em 0; }
+.nv-prose h2 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.5rem; font-weight: 700; }
+.nv-prose h3 { margin-top: 1.5rem; margin-bottom: .5rem; font-size: 1.25rem; font-weight: 600; }
+.nv-prose ul, .nv-prose ol { margin: 1rem 0; padding-left: 1.25rem; }
+.nv-prose blockquote { border-left: 4px solid #e5e7eb; padding-left: 1rem; color: #374151; margin: 1rem 0; }
+.nv-prose pre { background:#0b1020; color:#e5e7eb; padding:1rem; border-radius:.75rem; overflow:auto; }
+.nv-prose code { background:rgba(55,65,81,.08); padding:.1rem .35rem; border-radius:.35rem; }
+.nv-prose a { color:#4f46e5; text-decoration: underline; text-underline-offset: 2px; }
