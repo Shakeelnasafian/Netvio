@@ -78,34 +78,6 @@ function nv_time_to_read($post_id)
                         '</div>'
                     ); ?>
                 </article>
-
-                <aside class="hidden lg:block">
-                    <div class="sticky top-20">
-                        <div class="rounded-2xl border p-4">
-                            <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-700">On this page</h2>
-                            <nav id="nv-toc" class="mt-3 text-sm space-y-2 text-gray-700">
-                                <!-- JS injects TOC links here -->
-                            </nav>
-                        </div>
-
-                        <!-- Share -->
-                        <div class="rounded-2xl border p-4 mt-6">
-                            <h3 class="text-sm font-semibold uppercase tracking-wide text-gray-700">Share</h3>
-                            <div class="mt-3 flex gap-2">
-                                <?php
-                                $url = urlencode(get_permalink());
-                                $title = urlencode(get_the_title());
-                                ?>
-                                <a class="px-3 py-2 rounded-lg border hover:bg-gray-50" target="_blank" rel="noreferrer"
-                                    href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>">X</a>
-                                <a class="px-3 py-2 rounded-lg border hover:bg-gray-50" target="_blank" rel="noreferrer"
-                                    href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>">Facebook</a>
-                                <a class="px-3 py-2 rounded-lg border hover:bg-gray-50" target="_blank" rel="noreferrer"
-                                    href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url; ?>&title=<?php echo $title; ?>">LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
             </div>
 
             <!-- Author box -->
