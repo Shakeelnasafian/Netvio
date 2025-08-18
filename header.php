@@ -43,7 +43,8 @@
         <nav class="flex justify-between items-center px-6 py-4 relative  max-w-7xl mx-auto">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <a href="<?= site_url() ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-netvio.svg'); ?>" class="h-8" alt="Netvio Logo"></a>
+                <a href="<?= site_url() ?>"  alt="Netvio Logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-netvio.svg'); ?>" class="h-8" alt="Netvio Logo"></a>
             </div>
 
             <!-- Desktop Menu -->
