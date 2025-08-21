@@ -62,7 +62,7 @@ get_header();
         ],
       ];
       foreach ($health_tools as $t): ?>
-        <a href="<?php echo esc_url($t['url']); ?>" class="block rounded-xl border p-5 hover:shadow">
+        <a href="<?php echo esc_url($t['url']); ?>" class="block rounded-xl bg-gray-100 p-5 hover:shadow">
           <h3 class="text-lg font-semibold"><?php echo esc_html($t['title']); ?></h3>
           <p class="text-sm text-gray-600 mt-1"><?php echo esc_html($t['desc']); ?></p>
           <div class="mt-3 text-indigo-600 text-sm font-medium">Open →</div>
@@ -131,7 +131,7 @@ get_header();
     if ($q->have_posts()): ?>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <?php while ($q->have_posts()): $q->the_post(); ?>
-          <article class="rounded-xl border hover:shadow transition">
+          <article class="rounded-xl bg-gray-100 hover:shadow transition">
             <a href="<?php the_permalink(); ?>" class="block p-5">
               <h3 class="text-lg font-semibold line-clamp-2"><?php the_title(); ?></h3>
               <p class="text-sm text-gray-600 mt-2 line-clamp-3"><?php echo wp_kses_post(wp_trim_words(get_the_excerpt(), 24)); ?></p>
@@ -146,7 +146,7 @@ get_header();
   </section>
 
   <!-- Category quick links (optional) -->
-  <section class="mt-10">
+  <!-- <section class="mt-10">
     <h2 class="text-xl font-semibold mb-3">Browse by Topic</h2>
     <div class="flex flex-wrap gap-2">
       <?php
@@ -158,7 +158,7 @@ get_header();
         </a>
       <?php endforeach; ?>
     </div>
-  </section>
+  </section> -->
 
 </main>
 
