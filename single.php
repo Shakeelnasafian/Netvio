@@ -31,33 +31,25 @@ function nv_time_to_read($post_id)
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <!-- Header -->
-            <header class="mb-6">
-                <div class="flex items-center gap-2 mb-3">
-                    <?php
-                    $cats = get_the_category();
-                    if ($cats) :
-                        foreach (array_slice($cats, 0, 2) as $c):
-                    ?>
-                            <a href="<?php echo esc_url(get_category_link($c)); ?>" class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
-                                <?php echo esc_html($c->name); ?>
-                            </a>
-                    <?php endforeach;
-                    endif; ?>
-                </div>
+            <header class="mb-8 border-b border-gray-200 pb-6">
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight text-gray-900">
+                    <?php the_title(); ?>
+                </h1>
 
-                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight"><?php the_title(); ?></h1>
-
-                <div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+                <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600">
                     <div class="flex items-center gap-2">
-                        <?php echo get_avatar(get_the_author_meta('ID'), 28, '', '', ['class' => 'rounded-full']); ?>
-                        <span><?php echo esc_html(get_the_author()); ?></span>
+                        <?php echo get_avatar(get_the_author_meta('ID'), 32, '', '', ['class' => 'rounded-full']); ?>
+                        <span class="font-medium"><?php echo esc_html(get_the_author()); ?></span>
                     </div>
-                    <span>•</span>
-                    <time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo get_the_date(); ?></time>
-                    <span>•</span>
+                    <span class="hidden sm:inline">•</span>
+                    <time datetime="<?php echo esc_attr(get_the_date('c')); ?>" class="italic">
+                        <?php echo get_the_date(); ?>
+                    </time>
+                    <span class="hidden sm:inline">•</span>
                     <span><?php echo nv_time_to_read(get_the_ID()); ?></span>
                 </div>
             </header>
+
 
             <!-- Featured image -->
             <?php if (has_post_thumbnail()) : ?>
@@ -68,40 +60,10 @@ function nv_time_to_read($post_id)
 
             <!-- Content + Sticky TOC -->
             <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
-                <article class="entry-content nv-prose">
+                <article class="prose lg:prose-lg max-w-none">
                     <?php the_content(); ?>
-
-                    <!-- Tags -->
-                    <?php the_tags(
-                        '<div class="mt-8 flex flex-wrap gap-2 text-sm"><span class="text-gray-500 mr-1">Tags:</span>',
-                        '',
-                        '</div>'
-                    ); ?>
                 </article>
             </div>
-
-            <!-- Author box -->
-            <section class="mt-10 rounded-2xl border p-6 flex items-center gap-4">
-                <?php echo get_avatar(get_the_author_meta('ID'), 64, '', '', ['class' => 'rounded-full']); ?>
-                <div>
-                    <div class="font-semibold"><?php echo esc_html(get_the_author()); ?></div>
-                    <?php if ($bio = get_the_author_meta('description')): ?>
-                        <p class="text-sm text-gray-600 mt-1"><?php echo esc_html($bio); ?></p>
-                    <?php else: ?>
-                        <p class="text-sm text-gray-600 mt-1">Writing about practical tools for health and tech.</p>
-                    <?php endif; ?>
-                </div>
-            </section>
-
-            <!-- Prev / Next -->
-            <nav class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="rounded-2xl border p-4">
-                    <?php previous_post_link('%link', '← Previous: %title'); ?>
-                </div>
-                <div class="rounded-2xl border p-4 md:text-right">
-                    <?php next_post_link('%link', 'Next: %title →'); ?>
-                </div>
-            </nav>
 
             <!-- Related posts -->
             <?php
@@ -117,7 +79,7 @@ function nv_time_to_read($post_id)
                     <h2 class="text-2xl font-semibold mb-4">Related Articles</h2>
                     <div class="grid sm:grid-cols-3 gap-6">
                         <?php while ($rel->have_posts()): $rel->the_post(); ?>
-                            <article class="rounded-2xl border hover:shadow transition">
+                            <article class="rounded-2xl bg-gray-100 hover:shadow transition">
                                 <a href="<?php the_permalink(); ?>" class="block p-4">
                                     <h3 class="font-semibold line-clamp-2"><?php the_title(); ?></h3>
                                     <p class="text-sm text-gray-600 mt-1 line-clamp-3"><?php echo wp_kses_post(wp_trim_words(get_the_excerpt(), 20)); ?></p>
@@ -130,58 +92,9 @@ function nv_time_to_read($post_id)
                 </section>
             <?php endif; ?>
 
-            <!-- Comments -->
-            <section class="mt-10 rounded-2xl border p-6">
-                <?php comments_template(); ?>
-            </section>
-
     <?php endwhile;
     endif; ?>
 
 </main>
-
-<!-- TOC + code copy JS -->
-<script>
-    (function() {
-        // Build TOC from h2/h3
-        const article = document.querySelector('.entry-content');
-        const toc = document.getElementById('nv-toc');
-        if (article && toc) {
-            const headers = article.querySelectorAll('h2, h3');
-            let idx = 0;
-            headers.forEach(h => {
-                if (!h.id) {
-                    h.id = 'h-' + (++idx);
-                }
-                const a = document.createElement('a');
-                a.href = '#' + h.id;
-                a.textContent = h.textContent;
-                a.className = (h.tagName === 'H2') ? 'block hover:underline' : 'block pl-4 text-gray-600 hover:underline';
-                toc.appendChild(a);
-            });
-            if (!toc.children.length) {
-                toc.innerHTML = '<span class="text-gray-500">No sections</span>';
-            }
-        }
-
-        // Add copy buttons to code blocks
-        document.querySelectorAll('pre code').forEach(code => {
-            const pre = code.closest('pre');
-            pre.classList.add('relative');
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.textContent = 'Copy';
-            btn.className = 'absolute top-2 right-2 text-xs bg-black text-white px-2 py-1 rounded';
-            btn.addEventListener('click', async () => {
-                try {
-                    await navigator.clipboard.writeText(code.innerText);
-                    btn.textContent = 'Copied';
-                    setTimeout(() => btn.textContent = 'Copy', 1500);
-                } catch (e) {}
-            });
-            pre.appendChild(btn);
-        });
-    })();
-</script>
 
 <?php get_footer(); ?>
