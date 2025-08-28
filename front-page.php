@@ -10,21 +10,28 @@ get_header();
 <main id="primary" class="max-w-6xl mx-auto px-4 py-10">
 
   <!-- Hero -->
-  <section class="text-center py-10">
-    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
-      Free Tools & Practical Guides — <span class="text-indigo-600">Tech</span> + <span class="text-emerald-600">Health</span>
-    </h1>
-    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-      Calculate your health metrics, explore developer utilities, and read actionable posts — fast, ad-light, and mobile-friendly.
-    </p>
+<section class="text-center py-10">
+  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+    Free Tools &amp; Practical Guides — <span class="text-indigo-600">Tech</span> + <span class="text-emerald-600">Health</span>
+  </h1>
 
-    <!-- Site search -->
-    <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="mt-6 max-w-xl mx-auto flex">
-      <input type="text" name="s" class="flex-1 rounded-l-xl border px-4 py-3 focus:outline-none"
-             placeholder="Search posts or tools…">
-      <button class="rounded-r-xl bg-black text-white px-5 py-3">Search</button>
-    </form>
-  </section>
+  <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+    Calculate your health metrics, explore developer utilities, and read actionable posts — fast, ad-light, and mobile-friendly.
+  </p>
+
+  <!-- Secondary heading for SEO -->
+  <h2 class="mt-6 text-xl sm:text-2xl font-semibold text-gray-800">
+    Explore the latest blogs, calculators, and resources to improve your <span class="text-indigo-600">productivity</span> &amp; <span class="text-emerald-600">well-being</span>.
+  </h2>
+
+  <!-- Site search -->
+  <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="mt-8 max-w-xl mx-auto flex">
+    <input type="text" name="s" 
+           class="flex-1 rounded-l-xl border px-4 py-3 focus:outline-none"
+           placeholder="Search posts or tools…">
+    <button class="rounded-r-xl bg-black text-white px-5 py-3">Search</button>
+  </form>
+</section>
 
   <!-- Tools Tabs -->
   <section id="tools" class="bg-white shadow rounded-2xl p-6 mt-8">
