@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Front Page: Blog + Tools (Tech & Medical)
  * Place in your theme root: /wp-content/themes/Netvio/front-page.php
@@ -10,40 +11,31 @@ get_header();
 <main id="primary" class="max-w-6xl mx-auto px-4 py-10">
 
   <!-- Hero -->
-<section class="text-center py-10">
-  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
-    Free Tools &amp; Practical Guides — <span class="text-indigo-600">Tech</span> + <span class="text-emerald-600">Health</span>
-  </h1>
+  <section class="text-center py-10">
+    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+      Free Online Health & Fitness Calculators – <span class="text-indigo-600">BMI, BMR, TDEE & More</span>
+    </h1>
 
-  <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-    Calculate your health metrics, explore developer utilities, and read actionable posts — fast, ad-light, and mobile-friendly.
-  </p>
+    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+      Track your health, fitness, and daily calorie needs with our free, accurate, and mobile-friendly tools.
+    </p>
 
-  <!-- Secondary heading for SEO -->
-  <h2 class="mt-6 text-xl sm:text-2xl font-semibold text-gray-800">
-    Explore the latest blogs, calculators, and resources to improve your <span class="text-indigo-600">productivity</span> &amp; <span class="text-emerald-600">well-being</span>.
-  </h2>
-
-  <!-- Site search -->
-  <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="mt-8 max-w-xl mx-auto flex">
-    <input type="text" name="s" 
-           class="flex-1 rounded-l-xl border px-4 py-3 focus:outline-none"
-           placeholder="Search posts or tools…">
-    <button class="rounded-r-xl bg-black text-white px-5 py-3">Search</button>
-  </form>
-</section>
+    <!-- Secondary heading for SEO -->
+    <h2 class="mt-6 text-xl sm:text-2xl font-semibold text-gray-800">
+      <ul class="mt-4 space-y-1 text-left inline-block text-gray-600">
+        <li>✔️ 100% Free & Accurate Calculators</li>
+        <li>✔️ Easy-to-Use, Mobile-Friendly Tools</li>
+        <li>✔️ Backed by Science (BMI, BMR, TDEE, Body Fat)</li>
+        <li>✔️ Practical Fitness & Health Guides</li>
+      </ul>
+    </h2>
+  </section>
 
   <!-- Tools Tabs -->
   <section id="tools" class="bg-white shadow rounded-2xl p-6 mt-8">
-    <div class="flex items-center gap-4 border-b pb-2">
-      <button role="tab" aria-selected="true" aria-controls="panel-health"
-              class="tab-btn border-b-2 border-black px-3 py-2 font-semibold">Health Tools</button>
-      <!-- <button role="tab" aria-selected="false" aria-controls="panel-tech"
-              class="tab-btn border-b-2 border-transparent px-3 py-2 text-gray-600">Tech Tools</button> -->
-    </div>
 
     <!-- Health Tools Grid -->
-    <div id="panel-health" role="tabpanel" class="pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="panel-health" role="tabpanel" class="pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       <?php
       // Edit these links/titles to your actual tool URLs
       $health_tools = [
@@ -76,35 +68,6 @@ get_header();
         </a>
       <?php endforeach; ?>
     </div>
-
-    <!-- Tech Tools Grid (example placeholders) -->
-    <!-- <div id="panel-tech" role="tabpanel" hidden class="pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <?php
-    //   $tech_tools = [
-    //     [
-    //       'title' => 'Regex Tester',
-    //       'desc'  => 'Test and debug regular expressions in your browser.',
-    //       'url'   => site_url('/tools/regex-tester/'),
-    //     ],
-    //     [
-    //       'title' => 'JSON Formatter',
-    //       'desc'  => 'Pretty-print and validate JSON instantly.',
-    //       'url'   => site_url('/tools/json-formatter/'),
-    //     ],
-    //     [
-    //       'title' => 'Base64 Encode/Decode',
-    //       'desc'  => 'Convert text to/from Base64 safely.',
-    //       'url'   => site_url('/tools/base64/'),
-    //     ],
-    //   ];
-      //foreach ($tech_tools as $t): ?>
-        <a href="<?php //echo esc_url($t['url']); ?>" class="block rounded-xl border p-5 hover:shadow">
-          <h3 class="text-lg font-semibold"><?php //echo esc_html($t['title']); ?></h3>
-          <p class="text-sm text-gray-600 mt-1"><?php //echo esc_html($t['desc']); ?></p>
-          <div class="mt-3 text-indigo-600 text-sm font-medium">Open →</div>
-        </a>
-      <?php //endforeach; ?>
-    </div> -->
   </section>
 
   <!-- Featured CTA -->
@@ -116,7 +79,7 @@ get_header();
       </div>
       <div class="md:text-right">
         <a href="<?php echo esc_url(site_url('/health-calculators/')); ?>"
-           class="inline-block bg-white text-black rounded-xl px-5 py-3 font-semibold">Open Hub</a>
+          class="inline-block bg-white text-black rounded-xl px-5 py-3 font-semibold">Open Hub</a>
       </div>
     </div>
   </section>
@@ -126,7 +89,7 @@ get_header();
     <div class="flex items-center justify-between mb-4">
       <h2 class="text-2xl font-semibold">Latest Articles</h2>
       <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: site_url('/blog/')); ?>"
-         class="text-sm text-indigo-600">View all →</a>
+        class="text-sm text-indigo-600">View all →</a>
     </div>
 
     <?php
@@ -145,7 +108,8 @@ get_header();
               <div class="mt-3 text-xs text-gray-500"><?php echo get_the_date(); ?> · <?php echo get_the_author(); ?></div>
             </a>
           </article>
-        <?php endwhile; wp_reset_postdata(); ?>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
       </div>
     <?php else: ?>
       <p class="text-gray-600">No posts yet. Publish your first article to see it here.</p>
@@ -171,31 +135,33 @@ get_header();
 
 <!-- Simple tabs JS (no dependency) -->
 <script>
-(function(){
-  const container = document.getElementById('tools');
-  if(!container) return;
-  const tabs = container.querySelectorAll('.tab-btn');
-  const panels = [document.getElementById('panel-health'), document.getElementById('panel-tech')];
+  (function() {
+    const container = document.getElementById('tools');
+    if (!container) return;
+    const tabs = container.querySelectorAll('.tab-btn');
+    const panels = [document.getElementById('panel-health'), document.getElementById('panel-tech')];
 
-  function activate(idx){
-    tabs.forEach((t,i)=>{
-      const sel = i===idx;
-      t.setAttribute('aria-selected', sel ? 'true' : 'false');
-      t.classList.toggle('border-black', sel);
-      t.classList.toggle('text-gray-600', !sel);
-      t.classList.toggle('font-semibold', sel);
-      panels[i].hidden = !sel;
-    });
-  }
+    function activate(idx) {
+      tabs.forEach((t, i) => {
+        const sel = i === idx;
+        t.setAttribute('aria-selected', sel ? 'true' : 'false');
+        t.classList.toggle('border-black', sel);
+        t.classList.toggle('text-gray-600', !sel);
+        t.classList.toggle('font-semibold', sel);
+        panels[i].hidden = !sel;
+      });
+    }
 
-  tabs[0]?.addEventListener('click', ()=>activate(0));
-  tabs[1]?.addEventListener('click', ()=>activate(1));
-})();
+    tabs[0]?.addEventListener('click', () => activate(0));
+    tabs[1]?.addEventListener('click', () => activate(1));
+  })();
 </script>
 
 <?php
 // Minimal JSON-LD to help Google understand the site purpose
-$items = array_map(function($t){ return ['@type'=>'SiteNavigationElement','name'=>$t['title'],'url'=>$t['url']]; }, array_merge($health_tools));
+$items = array_map(function ($t) {
+  return ['@type' => 'SiteNavigationElement', 'name' => $t['title'], 'url' => $t['url']];
+}, array_merge($health_tools));
 $schema = [
   '@context' => 'https://schema.org',
   '@type'    => 'WebSite',
@@ -210,13 +176,19 @@ $schema = [
     [
       '@type' => 'ItemList',
       'name'  => 'Tools',
-      'itemListElement' => array_map(function($i,$k){ return [
-        '@type'=>'ListItem','position'=>$k+1,'item'=>$i
-      ]; }, $items, array_keys($items))
+      'itemListElement' => array_map(function ($i, $k) {
+        return [
+          '@type' => 'ListItem',
+          'position' => $k + 1,
+          'item' => $i
+        ];
+      }, $items, array_keys($items))
     ]
   ]
 ];
 ?>
-<script type="application/ld+json"><?php echo wp_json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE); ?></script>
+<script type="application/ld+json">
+  <?php echo wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+</script>
 
 <?php get_footer(); ?>
