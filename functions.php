@@ -84,3 +84,16 @@ function netvio_save_page_meta_boxes($post_id)
     }
 }
 add_action('save_post_page', 'netvio_save_page_meta_boxes');
+
+// Add built-in categories to pages
+function add_categories_to_pages() {
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'add_categories_to_pages');
+
+// Add built-in post tags to pages
+function add_tags_to_pages() {
+    register_taxonomy_for_object_type('post_tag', 'page');
+}
+add_action('init', 'add_tags_to_pages');
+
