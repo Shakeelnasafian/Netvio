@@ -7,19 +7,52 @@ function netvio_load_textdomain()
 add_action('after_setup_theme', 'netvio_load_textdomain');
 
 
+function netvio_asset_version($relative_path)
+{
+    $file_path = get_theme_file_path($relative_path);
+    return file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
+}
+
 function netvio_enqueue_assets()
 {
-    wp_enqueue_style('netvio-tailwind', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
-    wp_enqueue_style('netvio-css', get_template_directory_uri() . '/style.css', array(), '1.0.0');
+    wp_enqueue_style(
+        'netvio-tailwind',
+        get_theme_file_uri('/assets/css/style.css'),
+        array(),
+        netvio_asset_version('/assets/css/style.css')
+    );
 
-    if (is_home()) {
-        wp_enqueue_style('netvio-home', get_template_directory_uri() . '/assets/css/home.css', array(), '1.0.0');
+    wp_enqueue_style(
+        'netvio-css',
+        get_theme_file_uri('/style.css'),
+        array('netvio-tailwind'),
+        netvio_asset_version('/style.css')
+    );
+
+    if (is_front_page()) {
+        wp_enqueue_style(
+            'netvio-home',
+            get_theme_file_uri('/assets/css/home.css'),
+            array('netvio-tailwind'),
+            netvio_asset_version('/assets/css/home.css')
+        );
     }
 
-    // Enqueue menu.js
-    wp_enqueue_script('netvio-menu', get_template_directory_uri() . '/assets/js/menu.js', array(), time());
+    wp_enqueue_script(
+        'netvio-menu',
+        get_theme_file_uri('/assets/js/menu.js'),
+        array(),
+        netvio_asset_version('/assets/js/menu.js'),
+        true
+    );
 
-    wp_enqueue_script('tw-calculators', get_stylesheet_directory_uri() . '/assets/js/calculators.js', array(), time());
+    wp_enqueue_script(
+        'tw-calculators',
+        get_theme_file_uri('/assets/js/calculators.js'),
+        array(),
+        netvio_asset_version('/assets/js/calculators.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'netvio_enqueue_assets');
 
@@ -59,8 +92,19 @@ function netvio_add_page_meta_boxes()
 }
 add_action('add_meta_boxes', 'netvio_add_page_meta_boxes');
 
+function netvio_render_meta_box_nonce()
+{
+    static $done = false;
+    if ($done) {
+        return;
+    }
+    wp_nonce_field('netvio_meta_box', 'netvio_meta_box_nonce');
+    $done = true;
+}
+
 function netvio_shortcode_meta_box_callback($post)
 {
+    netvio_render_meta_box_nonce();
     $value = get_post_meta($post->ID, '_netvio_shortcode', true);
     echo '<textarea style="width:100%;min-height:40px;" name="netvio_shortcode">' . esc_textarea($value) . '</textarea>';
     echo '<p class="description">' . __('Paste your shortcode here.', 'netvio') . '</p>';
@@ -68,6 +112,7 @@ function netvio_shortcode_meta_box_callback($post)
 
 function netvio_header_content_meta_box_callback($post)
 {
+    netvio_render_meta_box_nonce();
     $value = get_post_meta($post->ID, '_netvio_header_content', true);
     echo '<textarea style="width:100%;min-height:60px;" name="netvio_header_content">' . esc_textarea($value) . '</textarea>';
     echo '<p class="description">' . __('Add custom header content (HTML allowed).', 'netvio') . '</p>';
@@ -76,11 +121,23 @@ function netvio_header_content_meta_box_callback($post)
 // Save custom fields
 function netvio_save_page_meta_boxes($post_id)
 {
+    if (defined('DOING_AUTOSAVE') && constant('DOING_AUTOSAVE')) {
+        return;
+    }
+
+    if (!isset($_POST['netvio_meta_box_nonce']) || !wp_verify_nonce($_POST['netvio_meta_box_nonce'], 'netvio_meta_box')) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
     if (array_key_exists('netvio_shortcode', $_POST)) {
-        update_post_meta($post_id, '_netvio_shortcode', sanitize_text_field($_POST['netvio_shortcode']));
+        update_post_meta($post_id, '_netvio_shortcode', sanitize_text_field(wp_unslash($_POST['netvio_shortcode'])));
     }
     if (array_key_exists('netvio_header_content', $_POST)) {
-        update_post_meta($post_id, '_netvio_header_content', wp_kses_post($_POST['netvio_header_content']));
+        update_post_meta($post_id, '_netvio_header_content', wp_kses_post(wp_unslash($_POST['netvio_header_content'])));
     }
 }
 add_action('save_post_page', 'netvio_save_page_meta_boxes');

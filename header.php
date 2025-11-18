@@ -8,6 +8,7 @@
 </head>
 
 <body <?php body_class('bg-white text-gray-800'); ?>>
+    <?php wp_body_open(); ?>
     <a class="skip-link screen-reader-text" href="#primary">
         <?php esc_html_e('Skip to content', 'netvio'); ?>
     </a>
@@ -43,8 +44,8 @@
         <nav class="flex justify-between items-center px-6 py-4 relative  max-w-7xl mx-auto">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <a href="<?= site_url() ?>"  alt="Netvio Logo">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-netvio.svg'); ?>" class="h-8" alt="Netvio Logo"></a>
+                <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_attr_e('Netvio home', 'netvio'); ?>">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-netvio.svg'); ?>" class="h-8" alt="<?php esc_attr_e('Netvio Logo', 'netvio'); ?>"></a>
             </div>
 
             <!-- Desktop Menu -->
@@ -66,7 +67,7 @@
 
             <!-- Hamburger Icon -->
             <div class="md:hidden">
-                <button id="menu-toggle">
+                <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
