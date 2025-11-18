@@ -1,4 +1,3 @@
-console.log("menu.js loaded");
 // Move changeSvgColor and resetSvgColor to global scope
 function changeSvgColor(div) {
     const svg = div.querySelector('svg');
@@ -51,7 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    if (!toggleButton || !mobileMenu) {
+        return;
+    }
+
     toggleButton.addEventListener('click', function () {
+        const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+        toggleButton.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         mobileMenu.classList.toggle('hidden');
     });
 });
